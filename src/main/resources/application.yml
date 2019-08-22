@@ -1,0 +1,10 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: json-diff-api
+
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/json-diff-api
