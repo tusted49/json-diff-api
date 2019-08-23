@@ -29,7 +29,7 @@ public class DiffController {
 
   @ApiOperation(value = "Add Left content")
   @PostMapping("/{id}/left")
-  public ResponseEntity addLeft(@PathVariable final Long id,
+  public ResponseEntity<Data> addLeft(@PathVariable final Long id,
       @RequestBody final DataRequest dataRequest) {
 
     return ResponseEntity.ok(createData.execute(Data.builder()
@@ -40,7 +40,7 @@ public class DiffController {
 
   @ApiOperation(value = "Add right content")
   @PostMapping("/{id}/right")
-  public ResponseEntity addRight(@PathVariable final Long id,
+  public ResponseEntity<Data> addRight(@PathVariable final Long id,
       @RequestBody final DataRequest dataRequest) {
 
     return ResponseEntity.ok(createData.execute(Data.builder()
