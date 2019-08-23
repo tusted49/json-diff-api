@@ -9,10 +9,10 @@ import lombok.*;
 @Builder
 public class DataRequest {
 
-    /**
-     * Property used to obtain JSON value
-     */
-    private String value;
+  /**
+   * Property used to obtain JSON value
+   */
+  private String value;
 
 
 }

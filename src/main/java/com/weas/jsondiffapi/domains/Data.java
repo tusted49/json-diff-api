@@ -12,11 +12,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "data")
 public class Data {
 
-    @Id
-    private Long id;
+  @Id
+  private Long id;
 
-    private String left;
+  private String left;
 
-    private String right;
+  private String right;
 
 }

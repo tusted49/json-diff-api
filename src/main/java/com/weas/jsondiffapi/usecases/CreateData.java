@@ -12,21 +12,21 @@ import static org.springframework.util.StringUtils.isEmpty;
 @RequiredArgsConstructor
 public class CreateData {
 
-    private final DataRepository dataRepository;
+  private final DataRepository dataRepository;
 
-    public Data execute(final Data data) {
+  public Data execute(final Data data) {
 
-        Assert.notNull(data.getId(), "Id cannot be null");
+    Assert.notNull(data.getId(), "Id cannot be null");
 
-        Data dataStored =
-                dataRepository.findById(data.getId())
-                .orElse(Data.builder().id(data.getId()).build());
+    Data dataStored =
+        dataRepository.findById(data.getId())
+            .orElse(Data.builder().id(data.getId()).build());
 
-        return dataRepository.save(Data.builder()
-                .id(data.getId())
-                .left(isEmpty(data.getLeft()) ? dataStored.getLeft() : data.getLeft())
-                .right(isEmpty(data.getRight()) ? dataStored.getRight() : data.getRight())
-                .build());
-    }
+    return dataRepository.save(Data.builder()
+        .id(data.getId())
+        .left(isEmpty(data.getLeft()) ? dataStored.getLeft() : data.getLeft())
+        .right(isEmpty(data.getRight()) ? dataStored.getRight() : data.getRight())
+        .build());
+  }
 
 }
