@@ -26,9 +26,10 @@ http://localhost:8080/swagger-ui.html
 ```
 
 ## Stack
-Java 8
-Spring Boot 2
-Lombok
-Swagger
-Junit & Mockito
+- Java 8
+- Spring Boot 2
+- Embedded MongoDB
+- Lombok
+- Swagger
+- Junit & Mockito
 
